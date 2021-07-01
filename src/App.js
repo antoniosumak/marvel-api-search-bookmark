@@ -30,7 +30,7 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const [numberOfCards, setNumberOfCards] = useState(20);
 
-  const { items } = useContext(BookmarkContext);
+  const { items, setItems } = useContext(BookmarkContext);
 
   //These keys are here if api exceeds limited number of calls
   //Uncomment public and private, then comment ones that exceeded limit
@@ -41,6 +41,15 @@ function App() {
   let privateKey = '6340c657a792b2169f1e1815cd90c518d823bb28';
   //let publicKey = '2107510df394a3eb406a72c7fdd63a81';
   //let privateKey = '43fbb73da505c89395ede8237cb77e5a3f66b7b7';
+
+  useEffect(() => {
+    if (localStorage.getItem('data')) {
+      const localData = JSON.parse(localStorage['data']);
+      setItems(localData);
+    }
+  }, []);
+
+  console.log(items);
 
   let ts = 1;
   let hashValue = md5(ts + privateKey + publicKey);
