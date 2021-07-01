@@ -2,4 +2,6 @@
 
 To start the app write in the console: 
 
-npm start
+### `npm start`
+
+this will start local server on localhost:3000
