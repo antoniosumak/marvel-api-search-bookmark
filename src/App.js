@@ -37,10 +37,10 @@ function App() {
 
   //let publicKey = '7c896812316b90146f957cba2a044d59';
   //let privateKey = '0baedf2c01ad7f96940078f427e7531f06c0e975';
-  let publicKey = '3085a94c12ad3b32d7b372fd283f2b24';
-  let privateKey = '6340c657a792b2169f1e1815cd90c518d823bb28';
-  //let publicKey = '2107510df394a3eb406a72c7fdd63a81';
-  //let privateKey = '43fbb73da505c89395ede8237cb77e5a3f66b7b7';
+  //let publicKey = '3085a94c12ad3b32d7b372fd283f2b24';
+  //let privateKey = '6340c657a792b2169f1e1815cd90c518d823bb28';
+  let publicKey = '2107510df394a3eb406a72c7fdd63a81';
+  let privateKey = '43fbb73da505c89395ede8237cb77e5a3f66b7b7';
 
   useEffect(() => {
     if (localStorage.getItem('data')) {

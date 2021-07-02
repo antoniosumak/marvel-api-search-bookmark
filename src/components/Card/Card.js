@@ -13,6 +13,7 @@ const Card = ({ name, src, id, hidden }) => {
   const { items, setItems } = useContext(BookmarkContext);
   const [bookmarked, setBookmarked] = useState(false);
 
+  localStorage['data'] = JSON.stringify(items);
   const addIdToArray = () => {
     localStorage['data'] = JSON.stringify(items);
     setItems([...items, id]);
